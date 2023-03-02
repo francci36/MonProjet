@@ -1,6 +1,3 @@
-<?php
-include_once('index.php');
-?>
 
    <!-- <div class="container">
         <header class="d-flex flex-wrap justify-content py-3 mb-4 border-bottom">
@@ -68,6 +65,17 @@ include_once('index.php');
 
     <div class="b-example-divider"></div>
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mon site</title>
+</head>
+<body>
     <header class="p-3 mb-3 border-bottom">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -77,10 +85,10 @@ include_once('index.php');
                     </svg>
                 </a>
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.php" class="nav-link  px-2 link-secondary">Présentation</a></li>
+                    <li><a href="index.php" class="nav-link  px-2 link-secondary">Sobre mim</a></li>
                     <li><a href="blog.php" class="nav-link px-2 link-dark">Blog</a></li>
                     <li><a href="newsletter.php" class="nav-link px-2 link-dark">Newsletter</a></li>
-                    <li><a href="rdv.php" class="nav-link px-2 link-dark">Rdv</a></li>
+                    <li><a href="agendamento.php" class="nav-link px-2 link-dark">Agendamento</a></li>
                     
                 </ul>
                 <form action="" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -91,11 +99,11 @@ include_once('index.php');
                         <img src="http://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small">
-                        <li><a href="#" class="dropdown-item">Nouveau Projet</a></li>
-                        <li><a href="#" class="dropdown-item">Paramètres</a></li>
-                        <li><a href="#" class="dropdown-item">Profils</a></li>
+                        <li><a href="#" class="dropdown-item">Novo projeto</a></li>
+                        <li><a href="#" class="dropdown-item">Configurações</a></li>
+                        <li><a href="#" class="dropdown-item">Perfil</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a href="#" class="dropdown-item">Sign out</a></li>
+                        <li><a href="#" class="dropdown-item">Sair</a></li>
                     </ul>
                 </div>
 

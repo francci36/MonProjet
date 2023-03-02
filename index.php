@@ -1,22 +1,10 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/style.css"
-    <title>Mon site</title>
-</head>
-<body>
 <?php
     $index=true;
-    include_once('header.php');
+   require_once('header.php');
 ?>
     <main class="flex-shrink-0">
         <div class="container">
-                <h1 class="mt-5">Mon Site</h1>
+                <h1 class="mt-5">Meu Site</h1>
                 <!--Ceci est mon carroussel-->
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators">
@@ -49,9 +37,7 @@
         </div>
     </main>
     <?php
-         include_once('footer.php');
+         require_once('footer.php');
     ?>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

@@ -1,3 +1,23 @@
+body{
+    background-color: rgb(229, 222, 199);
+}
 .carousel-inner{
     height: 400px;
 }
+.form-signin{
+    width: 30%;
+    height: auto;
+    display: bloc;
+   margin-left: 35%;
+   margin-top: 10%;
+}
+.nav{
+    border: solid rgba(47, 64, 53, 0.686);
+    border-radius: 5px;
+  background-color: rgb(186, 224, 211);
+}  
+.constelacao{
+    width: 60%;
+    height: auto;
+}
+ 
