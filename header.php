@@ -1,0 +1,105 @@
+<?php
+include_once('index.php');
+?>
+
+   <!-- <div class="container">
+        <header class="d-flex flex-wrap justify-content py-3 mb-4 border-bottom">
+            <a href="" class="d-flex align-items-center mb3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <span class="f-s4">simple header</span>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Acueille</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Présentation</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Newsletter</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Rdv</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container">
+        <header class="d-flex justify-content-center py-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Acueille</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Présentation</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Newsletter</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Rdv</a></li>
+            </ul>
+            <div class="col-md-3 text-end">
+                <button class="btn btn-outline-primary">Login</button>
+                <button class="btn btn-primary">Sign-up</button>
+            </div>
+        </header>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="bootstrap">
+                        <use xlink:href="bootstrap"></use>
+                    </svg>  
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">Accueil</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Présentation</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Blog</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Newsletter</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Rdv</a></li>
+                </ul>
+                <form action="" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="recherche" aria-label="recherche">
+                </form>
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">login</button>
+                    <button type="buttom" class="btn btn-warning">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="b-example-divider"></div>
+-->
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-labe="bootstrap">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.php" class="nav-link  px-2 link-secondary">Présentation</a></li>
+                    <li><a href="blog.php" class="nav-link px-2 link-dark">Blog</a></li>
+                    <li><a href="newsletter.php" class="nav-link px-2 link-dark">Newsletter</a></li>
+                    <li><a href="rdv.php" class="nav-link px-2 link-dark">Rdv</a></li>
+                    
+                </ul>
+                <form action="" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control " placeholder="recherche" aria-label="recherche">
+                </form>
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="http://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small">
+                        <li><a href="#" class="dropdown-item">Nouveau Projet</a></li>
+                        <li><a href="#" class="dropdown-item">Paramètres</a></li>
+                        <li><a href="#" class="dropdown-item">Profils</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="#" class="dropdown-item">Sign out</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
