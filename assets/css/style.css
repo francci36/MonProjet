@@ -9,15 +9,27 @@ body{
     height: auto;
     display: bloc;
    margin-left: 35%;
-   margin-top: 10%;
+   margin-top: 5%;
+   padding: 0 10px 0;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   border-radius: 10px;
+}
+.d-flex{
+    background-color: rgb(140, 194, 140);
+}
+.d-block{
+    padding-right: 10px;
 }
 .nav{
-    border: solid rgba(47, 64, 53, 0.686);
+    
     border-radius: 5px;
   background-color: rgb(186, 224, 211);
 }  
 .constelacao{
-    width: 60%;
-    height: auto;
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
 }
- 
+.align-items-start{
+    margin: 10%;
+}
