@@ -1,6 +1,6 @@
 <?php
 require_once 'db-inc.php'; 
-class Utilisateur {
+class utilisateur {
     private $id;
     private $nom;
     private $prenom;
@@ -70,26 +70,4 @@ class Utilisateur {
         $this->inscription_date = $inscription_date;
     }
 }
-$utilisateur = new Utilisateur();
-$utilisateur->setNom("Dupont");
-$utilisateur->setPrenom("Jean");
-$utilisateur->setEmail("jean.dupont@example.com");
-$utilisateur->setPassword("monmotdepasse");
-$utilisateur->setTelephone("555-1234");
-$utilisateur->setType_compte("client");
-$utilisateur->setInscription_date("06-05-2022");
 
-// Ensuite, insérez l'utilisateur dans la base de données avec une requête SQL INSERT
-$db = pdo_connect();
-$rq = $conn->prepare("INSERT INTO utilisateur (nom, prenom, email, password telephone, type_compte, inscription_date) VALUES (:nom, :prenom, :email, :password :telephone, :type_compte, :inscription_date)");
-$rq->bindParam(':nom', $utilisateur->getNom());
-$rq->bindParam(':prenom', $utilisateur->getPrenom());
-$rq->bindParam(':email', $utilisateur->getEmail());
-$rq->bindParam(':telephone', $utilisateur->getTelephone());
-$password_crypte = password_hash($utilisateur->getPassword(), PASSWORD_DEFAULT);
-$rq->bindParam(':password', $password_crypte);
-
-$rq->bindParam(':type_compte', $utilisateur->getType_compte());
-$rq->bindParam(':inscription_date', $utilisateur->getInscription_date());
-
-$rq->execute();

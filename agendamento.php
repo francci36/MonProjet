@@ -3,7 +3,7 @@
 ?>
 <body>
     <main class="flex-shrink-0">
-        <form class="form-signin">
+        <form class="form-signin" method= "post">
             <div class="text-center mb-4">
                 <!--<img class="mb-4" src="assets/css/bootstrap.css" alt="" width="72"
                 height="72">-->
@@ -56,7 +56,7 @@
             <div class="form-label-group">
                 <input
                     type="password"
-                    id="inputPassword"
+                    id="inputPassword2"
                     class="form-control"
                     placeholder="confirme sua senha"
                     required="required">
@@ -85,7 +85,7 @@
                 </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Validar</button>
-            <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+            <p class="mt-5 mb-3 text-muted text-center">&copy; 2021-2023</p>
         </form>
     </main>
 </body>
