@@ -1,9 +1,9 @@
 <?php
- require_once('header.php')
+ require_once('header.php');
 ?>
 <body>
     <main class="flex-shrink-0">
-        <form class="form-signin" method= "post">
+        <form class="form-signin" method= "post" action="action.php">
             <div class="text-center mb-4">
                 <!--<img class="mb-4" src="assets/css/bootstrap.css" alt="" width="72"
                 height="72">-->
@@ -14,6 +14,7 @@
             </div>
 
             <div class="form-label-group">
+            <label for="name">Nome</label>
                 <input
                     type="text"
                     id="inputName"
@@ -21,9 +22,10 @@
                     placeholder="digite seu nome"
                     required="required"
                     autofocus="autofocus">
-                <label for="name">Nome</label>
+                
             </div>
             <div class="form-label-group">
+            <label for="lastname">Sobrenome</label>
                 <input
                     type="text"
                     id="inputLastName"
@@ -31,9 +33,10 @@
                     placeholder="digite seu sobre nome"
                     required="required"
                     autofocus="autofocus">
-                <label for="lastname">Sobrenome</label>
+                
             </div>
             <div class="form-label-group">
+            <label for="inputEmail">Email</label>
                 <input
                     type="email"
                     id="inputEmail"
@@ -41,30 +44,12 @@
                     placeholder="digite seu email"
                     required="required"
                     autofocus="autofocus">
-                <label for="inputEmail">Email</label>
-            </div>
-
-            <div class="form-label-group">
-                <input
-                    type="password"
-                    id="inputPassword"
-                    class="form-control"
-                    placeholder="digite sua senha"
-                    required="required">
-                <label for="inputPassword">senha</label>
+                
             </div>
             <div class="form-label-group">
-                <input
-                    type="password"
-                    id="inputPassword2"
-                    class="form-control"
-                    placeholder="confirme sua senha"
-                    required="required">
-                <label for="inputPassword">Confirmar senha</label>
-            </div>
-            <div class="form-label-group">
+            <label for="inputTelephone">Numéro de téléphone</label>
                 <input type="tel" id="inputTelephone" class="form-control" placeholder="Numéro de téléphone" name="telephone" required>
-                <label for="inputTelephone">Numéro de téléphone</label>
+                
             </div>
             <div class="form-group">
                 <label for="selectTypeCompte">Type de compte</label>

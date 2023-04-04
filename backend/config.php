@@ -18,7 +18,7 @@ function pdo_connect()
     global $DB_NAME;
     try {
         // on crée une nouvelle instance de PDO en passant les paramètres de connexion en argument
-        return new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME;charset=utf8mb4");
+        return new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME;charset=utf8mb4", $DB_USER, $DB_PASSWORD);
     }  catch (PDOException $exception) {
        // En cas d'erreur, on affiche un message d'erreur et on quitte le script
         exit('impossible de se connecter a la BDD');

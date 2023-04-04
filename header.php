@@ -92,7 +92,6 @@ class="b-example-divider"></div> -->
                                 href="login.php"
                                 class="<?php echo ($_SERVER['PHP_SELF'] == '/login.php'); ?>nav-link px-2 link-dark">Login</a>
                         </li>
-
                     </ul>
                     <!-- Ici je crée le formulaire avec un input pour une zonne de recherche -->
                     <form action="" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
