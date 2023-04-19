@@ -1,6 +1,6 @@
 <?php
     $blog=true;
-    require_once('header.php');
+    require_once('../header.php');
 ?>
 <main class="flex-shrink-0">
     <div class="container">
@@ -133,7 +133,5 @@
 
 </main>
 <?php
-         require_once('footer.php');
+         require_once('../footer.php');
     ?>
-
-<script src="assets/js/bootstrap.bundle.min.js"></script>

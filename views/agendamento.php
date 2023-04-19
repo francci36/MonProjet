@@ -3,7 +3,7 @@
 ?>
 <body>
     <main class="flex-shrink-0">
-        <form class="form-signin" method= "post" action="action.php">
+        <form class="form-signin" method= "post" action="interface/action.php?e=ajoutRendez_vous">
             <div class="text-center mb-4">
                 <!--<img class="mb-4" src="assets/css/bootstrap.css" alt="" width="72"
                 height="72">-->
@@ -55,12 +55,16 @@
                 <label for="selectTypeCompte">Type de compte</label>
                 <select class="form-control" id="selectTypeCompte" name="type_compte">
                     <option value="client">Client</option>
-                    <option value="professionnel">Professionnel</option>
+                    <option value="administrateur">administrateur</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="inputDate">Date et heure de rendez-vous</label>
-                <input type="datetime-local" class="form-control" id="inputDate" name="date_heure" required>
+                <label for="inputDate">Date</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="heure">Heure</label>
+                <input type="time" class="form-control" id="heure" name="heure" required>
             </div>
 
             <div class="checkbox mb-3">
