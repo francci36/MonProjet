@@ -1,5 +1,20 @@
 <?php
+session_start();
     $index=true;
+
+    // initialise moin programme
+    
+    //require_once('app/config.php');
+    require_once('app/classe.apprdvtherapeute.php');
+    
+
+
+
+
+    //
+    //
+    // Démarrons l'affichage du site web
+    //
    require_once('header.php');
 ?>
 <main class="flex-shrink-0">
@@ -107,6 +122,3 @@
         <?php
          require_once('footer.php');
     ?>
-
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/projet.js"></script>
