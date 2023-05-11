@@ -1,10 +1,12 @@
 <?php
+session_start();
     $index=true;
 
     // initialise moin programme
     
-    require_once('app/config.php');
-    require_once('app/app-rdvtherapeute.php');
+    //require_once('app/config.php');
+    require_once('app/classe.apprdvtherapeute.php');
+    
 
 
 
