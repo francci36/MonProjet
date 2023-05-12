@@ -64,6 +64,19 @@ class RT_Agenda extends RT_AppRDVTherapeute_Mother {
         
         return $aRDV;
     }
+
+    public function getTotalRdv() {
+        // compter le nombre de rdv à partir de ;la date du jour
+        $oPdo = $this->get_pdo();
+        $oStmt = $oPdo->prepare('SELECT COUNT(*) FROM rendez_vous WHERE date >= :date');
+        $oStmt->bindValue(':date', date('Y-m-d'), PDO::PARAM_STR);
+        $oStmt->execute();
+        $aResult = $oStmt->fetch(PDO::FETCH_ASSOC);
+        return $aResult['COUNT(*)'];
+        
+    }
+
+
     // methode pour recuprér tous les rdv par patient
     public function getAllRDVByPatient($oPatient) {
         $oPdo = $this->get_pdo();

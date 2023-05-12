@@ -21,10 +21,37 @@ body{
     padding-right: 10px;
 }
 .nav{
-    
+    margin: 10px 5px !important;
     border-radius: 5px;
-  background-color: rgb(186, 224, 211);
-}  
+    background-color: rgb(186, 224, 211);
+} 
+.nav a:not(.nav-active):hover {
+    background-color: rgb(109 218 243 / 30%);
+    border-radius: 6px;
+}
+
+.nav-active:hover ,
+.nav-active {
+    background-color: rgb(109 218 243 / 85%);
+    border-radius: 6px;
+    text-decoration: underline;
+}
+    
+.info-nb-rdv {
+    background-color: rgb(202, 172, 211);
+    border-radius: 9px;
+    padding: 1px 6px;
+    font-size: 12px;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+
+
 .constelacao{
     width: 100%;
     height: 300px;
@@ -32,4 +59,8 @@ body{
 }
 .align-items-start{
     margin: 10%;
+}
+.liste-rdv li{
+    margin-top: 30px;
+    color: rgb(44, 119, 44);
 }

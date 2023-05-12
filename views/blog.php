@@ -14,7 +14,7 @@
                         <h3 class="mb-0">
                             <a class="text-dark" href="#">Featured post</a>
                         </h3>
-                        <img class="constelacao" src="assets/images/constelacao-familiar-1.jpg" alt="">
+                        <img class="constelacao" src="../assets/images/constelacao-familiar-1.jpg" alt="">
 
                         <div class="mb-1 text-muted">Nov 12</div>
                         <p class="card-text mb-auto">Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -78,7 +78,7 @@
                         <h3 class="mb-0">
                             <a class="text-dark" href="#">Post title</a>
                         </h3>
-                        <img class="constelacao" src="assets/images/Image.jpg" alt="">
+                        <img class="constelacao" src="../assets/images/Image.jpg" alt="">
                         <div class="mb-1 text-muted">Nov 11</div>
                         <p class="card-text mb-auto">Lorem, ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis, vero enim! Cumque blanditiis officiis, quo neque iure eum
