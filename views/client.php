@@ -22,26 +22,30 @@ require_once('../header.php');
 $aListeRDVUser = $oAgenda->getAllRDV( '', $oUser );
 
 if (empty($aListeRDVUser)) {
+    echo '<div class="container">';
     echo "<p>Aucun rendez-vous à afficher</p>";
+    echo "</div>";
     
 } else {
+    echo '<div class="container">';
     echo "<h2>Liste des rendez-vous</h2>";
-    echo "<ul>";
+    echo "<ul class='liste-rdv'>";
 
     foreach($aListeRDVUser as $oRDV){
-        echo '<li>Rendez-vous du ' . $oRDV->getDate() . ' de ' . $oRDV->getHeureDebut() 
+        echo '<li classe="user">Rendez-vous du ' . $oRDV->getDate() . ' de ' . $oRDV->getHeureDebut() 
             . ' à ' . $oRDV->getHeureFin() 
             . ' <a href="#" onclick="updateRdv('.$oRDV->getId().',\''.$oRDV->getDate().'\',\''.$oRDV->getHeureDebut().'\',\''.$oRDV->getHeureFin().'\');">Modifier</a> '
             . '- <a href="#" onclick="supprimeRdv ('.$oRDV->getId().');">Supprimer</a></li>';    
     }
     echo "</ul>";
+    echo "</div>";
 
 }
 
 
 // HTML code for the appointment booking form
 ?>
-
+<div class="container">
                                 <a onclick="createRdv();" href="#">Prendre un rendez-vous</a> 
                               
 
@@ -64,23 +68,31 @@ if (empty($aListeRDVUser)) {
                                             </div>
                                             
                                         <button id="btnEdit" type="submit" class="btn btn-primary">Ajouter-Envoyer</button>
-                                        <input  id="idRdv" name="idRdv" value="" type="text">
+                                        <input id="idRdv" name="idRdv" value="" type="hidden">
+
                                         <input hidden name="actionQuery" id="actionQuery" value="" type="text">
                                         <input hidden name="form_name" value="crea-update-form">
                                     </form>
+                                    <button id="btnCancel" type="" class="btn btn-primary"  onclick="hideForm('crea-update-form')">Annuler</button>
+                                        
                                 </div>
                                 <div id="delete-form" style="display:none;">
                                     <form method="post" action="../interface/interface_client.php">
                                         <button id="btnDelete" type="submit" class="btn btn-primary">Je confirme la suppression de ce RDV</button>
-                                        <input  id="fd_idRdv" name="idRdv" value="" type="text">
+                                       <input  id="fd_idRdv" name="idRdv" value="" type="hidden">
                                         <input hidden name="actionQuery" id="fd_actionQuery" value="deleteRdv" type="text">
                                         <input hidden name="form_name" value="delete-form">
                                     </form>
+                                    <button id="btnCancel" type="" class="btn btn-primary" onclick="hideForm('delete-form')">Annuler</button>
+                                        
                                 </div>
-
+</div>
 
                                 <!-- block js -->
                                 <script >
+                                    function hideForm( form ) {
+                                        document.getElementById(form).style.display = 'none';
+                                    }
                                     function createRdv() {
                                         document.getElementById('crea-update-form').style.display = 'block';
                                         //document.getElementsByName('form_name')[0].value = 'crea-update-formm';

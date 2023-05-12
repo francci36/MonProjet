@@ -1,12 +1,17 @@
 <?php
 require_once('app/classe.apprdvtherapeute.php');
 
-global $oAppRDV;
+//global $oAppRDV;
+
+$oAppRDV = RT_AppRDVTherapeute::instance();
+
+$oUser = $oAppRDV->get_UserConnected();
+$oAgenda = $oAppRDV->get_Agenda();
+
+
 ?>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +21,7 @@ global $oAppRDV;
         <title>Mon site</title>
     </head>
     <body>
-        <a href="test.php">Test</a>
+        <!-- <a href="test.php">Test</a> -->
         <!-- ceci est une section avec une classe de marges et de bordures -->
         <header class="p-3 mb-3 border-bottom">
             <!-- Ce conteneur maintien l'allignement du contenu et la centralisation -->
@@ -34,36 +39,39 @@ global $oAppRDV;
                     </a>
                     <!-- Ici c'est une liste non ordonnée de liens de navigation pour les
                     différentes pages -->
-                    <ul
-                        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li>
                             <a
                                 href="/index.php"
-                                class="<?php echo ($_SERVER['PHP_SELF'] == '/index.php'); ?>nav-link  px-2 link-dark">Sobre mim</a>
+                                class="<?php echo ($_SERVER['PHP_SELF'] == '/index.php') ? 'nav-active' : ''; ?> nav-link  px-2 link-dark">Accueil</a>
                         </li>
                         <li>
                             <a
                                 href="/views/blog.php"
-                                class="<?php echo ($_SERVER['PHP_SELF'] == '/views/blog.php'); ?>nav-link px-2 link-dark ">Blog</a>
+                                class="<?php echo ($_SERVER['PHP_SELF'] == '/views/blog.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark ">Blog</a>
                         </li>
                         <li>
-                            <a
-                                href="/views/client.php"
-                                class="<?php echo ($_SERVER['PHP_SELF'] == '/views/client.php'); ?>nav-link px-2 link-dark ">Mon compte</a>
+                            <?php if( $oUser->is_connected() && !$oUser->isAdmin()) : ?>
+                                <a
+                                    href="/views/client.php"
+                                    class="<?php echo ($_SERVER['PHP_SELF'] == '/views/client.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark ">
+                                Mon compte</a>
+                            <?php else: 
+                                $nbRdv = $oAgenda->getTotalRdv();
+                                ?>
+                                <a
+                                    href="/backend/admin.php"
+                                    class="<?php echo ($_SERVER['PHP_SELF'] == '/backend/admin.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark ">
+                                Espace admin <span class="info-nb-rdv"><?php echo $nbRdv; ?></span></a>
+                            <?php endif; ?>
                         </li>
                         <li>
                             <a
                                 href="/views/newsletter.php"
-                                class="<?php echo ($_SERVER['PHP_SELF'] == '/views/newsletter.php'); ?>nav-link px-2 link-dark">Newsletter</a>
+                                class="<?php echo ($_SERVER['PHP_SELF'] == '/views/newsletter.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark">Newsletter</a>
                         </li>
+                    </ul>
      
-                    <!-- Ici je crée le formulaire avec un input pour une zonne de recherche -->
-                    <form action="./interface/interface_header.php" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <input
-                            type="search"
-                            class="form-control "
-                            placeholder="recherche"
-                            aria-label="recherche"></form>
                     <div class="dropdown text-end">
                         <a
                             href="#"

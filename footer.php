@@ -23,11 +23,9 @@
                     <li>
                         <a href="newsletter.php">Newsletter</a>
                     </li>
+                  
                     <li>
-                        <a href="agendamento.php">Agendamento</a>
-                    </li>
-                    <li>
-                        <a href="login.php">Login</a>
+                        <a href="#connexion.html">Se connecter</a>
                     </li>
                 </ul>
             </div>

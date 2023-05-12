@@ -1,10 +1,10 @@
 CREATE TABLE utilisateur (
     utilisateur_id INT PRIMARY KEY AUTO_INCREMENT,
-    utilisateur_name VARCHAR(50) NOT NULL,
+    utilisateur_name VARCHAR(50) NOT NULL;
     utilisateur_lastName VARCHAR(50) NOT NULL,
     utilisateur_email VARCHAR(50) NOT NULL,
-    utilisateur_telephone VARCHAR(20) NOT NULL,
-    type_compte VARCHAR(20) NOT NULL
+    utilisateur_telephone VARCHAR(50) NOT NULL,
+    type_compte VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE rendez_vous (
