@@ -1,6 +1,11 @@
 <?php
-    $blog=true;
+    session_start();
     require_once('../header.php');
+    
+    // initialise moin programme
+    
+    //require_once('app/config.php');
+    require_once('../app/classe.apprdvtherapeute.php');
 ?>
 <main class="flex-shrink-0">
     <div class="container">
