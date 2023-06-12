@@ -5,9 +5,7 @@ require_once('../app/classe.apprdvtherapeute.php');
 
 global $oAppRDV;
 
-// on vérifie que le formulaire est le formulaire de rendez-vous
 // Rappel = qd je demande oUserConnected, je demande une REFERENCE & de l'objet
-$oUser = null;
 $oUser = $oAppRDV->get_UserConnected();
 
 // si user est connecté et admin
@@ -40,3 +38,4 @@ switch($_POST['actionQuery']){
         break;
 }
 header('Location: ../backend/admin.php');
+

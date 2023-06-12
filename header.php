@@ -18,7 +18,9 @@ $oAgenda = $oAppRDV->get_Agenda();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/assets/css/bootstrap.css">
         <link rel="stylesheet" href="/assets/css/style.css">
-        <title>Mon site</title>
+        <title>Maria José - Thérapeute Familiale Expérimentée</title>
+        <meta name="description" content="Maria José est une thérapeute familiale expérimentée dévouée à aider les familles à traverser les défis et à construire des relations saines et épanouissantes.">
+
     </head>
     <body>
         <!-- <a href="test.php">Test</a> -->
@@ -41,36 +43,26 @@ $oAgenda = $oAppRDV->get_Agenda();
                     différentes pages -->
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li>
-                            <a
-                                href="/index.php"
-                                class="<?php echo ($_SERVER['PHP_SELF'] == '/index.php') ? 'nav-active' : ''; ?> nav-link  px-2 link-dark">Accueil</a>
+                            <a href="/index.php" class="<?php echo ($_SERVER['REQUEST_URI'] == '/index.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark">Accueil</a>
                         </li>
                         <li>
-                            <a
-                                href="/views/blog.php"
-                                class="<?php echo ($_SERVER['PHP_SELF'] == '/views/blog.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark ">Blog</a>
+                            <a href="/views/blog.php" class="<?php echo ($_SERVER['REQUEST_URI'] == '/views/blog.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark">Blog</a>
                         </li>
                         <li>
-                            <?php if( $oUser->is_connected() && !$oUser->isAdmin()) : ?>
-                                <a
-                                    href="/views/client.php"
-                                    class="<?php echo ($_SERVER['PHP_SELF'] == '/views/client.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark ">
-                                Mon compte</a>
-                            <?php else: 
+                            <a href="/views/services.php" class="<?php echo ($_SERVER['REQUEST_URI'] == '/views/services.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark">Services</a>
+                        </li>
+
+                        <li>
+                            <?php if ($oUser->is_connected() && !$oUser->isAdmin()): ?>
+                                <a href="/views/client.php" class="<?php echo ($_SERVER['REQUEST_URI'] == '/views/client.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark">Mon compte</a>
+                            <?php else:
                                 $nbRdv = $oAgenda->getTotalRdv();
-                                ?>
-                                <a
-                                    href="/backend/admin.php"
-                                    class="<?php echo ($_SERVER['PHP_SELF'] == '/backend/admin.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark ">
-                                Espace admin <span class="info-nb-rdv"><?php echo $nbRdv; ?></span></a>
+                            ?>
+                                <a href="/backend/admin.php" class="<?php echo ($_SERVER['REQUEST_URI'] == '/backend/admin.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark">Espace admin <span class="info-nb-rdv"><?php echo $nbRdv; ?></span></a>
                             <?php endif; ?>
                         </li>
-                        <li>
-                            <a
-                                href="/views/newsletter.php"
-                                class="<?php echo ($_SERVER['PHP_SELF'] == '/views/newsletter.php') ? 'nav-active' : ''; ?> nav-link px-2 link-dark">Newsletter</a>
-                        </li>
                     </ul>
+
      
                     <div class="dropdown text-end">
                         <a
@@ -79,7 +71,7 @@ $oAgenda = $oAppRDV->get_Agenda();
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <img
-                                src="http://github.com/mdo.png"
+                                src="/assets/images/majo.jpg"
                                 alt="mdo"
                                 width="32"
                                 height="32"
@@ -144,6 +136,7 @@ $oAgenda = $oAppRDV->get_Agenda();
                                         </form>
                                     </div>
                             <?php endif; ?>
+                            
 
                         
                     </div>

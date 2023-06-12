@@ -2,30 +2,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h4>Sobre mim</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deleniti
-                    corporis sequi minus, accusantium impedit omnis laborum sunt obcaecati suscipit
-                    repellat quod, sint ut, aspernatur placeat nesciunt nihil? Asperiores aut
-                    numquam sapiente, necessitatibus nisi quas inventore iusto itaque voluptate cum
-                    pariatur accusantium commodi libero sint laborum enim. Eos, repellat ut!
+            <h4>Qui suis-je?</h4>
+            <p class="card-text mb-auto">Maria José est une thérapeute familiale situé à Vila Nova de Gaia au Portugal, expérimentée dévouée à aider les familles à traverser les défis et à construire des relations saines et épanouissantes. Avec une approche centrée sur la famille et une écoute bienveillante, Maria José offre un espace sûr et confidentiel pour explorer les dynamiques familiales, améliorer la communication et trouver des solutions constructives.
 
-                </p>
+</p>
             </div>
             <div class="col-md-4">
                 <h4>Links uteis</h4>
                 <ul>
                     <li>
-                        <a href="index.php">Sobre mim</a>
+                        <a href="/index.php">Qui suis-je?</a>
                     </li>
                     <li>
-                        <a href="blog.php">Blog</a>
+                        <a href="/views/blog.php">Blog</a>
                     </li>
                     <li>
-                        <a href="newsletter.php">Newsletter</a>
+                        <a href="/views/mensions_legales.php">Mensions Légales</a>
                     </li>
                   
                     <li>
-                        <a href="#connexion.html">Se connecter</a>
+                        <a href="/views/services.php">Services d'acompagnement proposés</a>
                     </li>
                 </ul>
             </div>
