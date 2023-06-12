@@ -1,6 +1,4 @@
 <?php
-
-
 class RT_AppRDVTherapeute_Mother {
 
 

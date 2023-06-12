@@ -1,6 +1,4 @@
 <?php
-
-
 require_once('config.php');
 require_once('classe.mother.php');
 
@@ -72,8 +70,6 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
         // Charger les données de la session
         //session_start();
         if( isset($_SESSION['app_rdv_therapeute']) ) {
-            //$this->oPdo = $_SESSION['app_rdv_therapeute']->oPdo;
-            $test = $_SESSION['hello_or_not'];
 
 
             switch($object_name) {
@@ -96,10 +92,9 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
         // Sauvegarder les données dans la session
         //session_start();
         $_SESSION['app_rdv_therapeute'] = true;
-        $_SESSION['hello_or_not'] = "bonjour";
         $_SESSION['user_connected'] = serialize($this->get_UserConnected() );
         $_SESSION['user_connected-email'] = serialize(  $this->get_UserConnected()->getEmail() );
-    $_SESSION['agenda'] = serialize( $this->get_Agenda() /*$this->oAgenda*/ );
+        $_SESSION['agenda'] = serialize( $this->get_Agenda() /*$this->oAgenda*/ );
     }
 
     public static function instance() {
@@ -127,16 +122,16 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
     if( isset($_SESSION['app_rdv_therapeute']) ) {
 
         $oAppRDV->load_from_session();
-/*
-        //$this->oPdo = $_SESSION['app_rdv_therapeute']->oPdo;
-        $o = $_SESSION['app_rdv_therapeute'];
-        $oAppRDV->oUserConnected = $o->oUserConnected;
-        $oAppRDV->oAgenda = $o->oAgenda;
 
-        // test
-        $oAppRDV = $o; */
     }
 }
+
+
+
+
+
+
+
 //
 /// INSTANCIE L'app
 global $oAppRDV;

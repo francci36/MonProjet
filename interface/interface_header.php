@@ -3,20 +3,13 @@ session_start();
 
 require_once('../app/classe.apprdvtherapeute.php');
 
-
 global $oAppRDV;
 
-
-//echo "valeur de valeur_test ==".$oAppRDV->oUserConnected->valeur_test;
 
 // Rappel = qd je demande oUserConnected, je demande une REFERENCE & de l'objet
 $oUser = &$oAppRDV->get_UserConnected();
 
 
-echo "valeur de valeur_test ==".$oAppRDV->oUserConnected->valeur_test;
-
-$oUser->valeur_test = "c'est une balade douce";
-echo "valeur de valeur_test ==".$oAppRDV->oUserConnected->valeur_test;
 
 /**
  * Ce fichier traite les requêtes de header.php
