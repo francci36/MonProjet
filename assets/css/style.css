@@ -1,25 +1,81 @@
+/* faire couleur dégradée dans le body */
 body{
-    background-color: rgb(229, 222, 199);
+    
+    background: linear-gradient(90deg, rgba(186, 224, 211, 1) 0%, rgb(146, 163, 189) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    margin: 0;
 }
+h1{
+    font-size: 30px;
+    color: rgb(44, 119, 44);
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+h2{
+    font-size: 20px;
+    color: rgb(44, 119, 44);
+    text-align: center;
+    margin-top: 10px;
+
+}
+a.text-dark:hover{
+    text-decoration: none;
+    color: rgb(44, 119, 44);
+
+
+}
+h3{
+    font-size: 17px;
+    color: rgb(44, 119, 44);
+    text-align: center;
+    margin-top: 10px;
+}
+h4{
+    font-size: 15px;
+    color: rgb(44, 119, 44);
+    text-align: center;
+    margin-top: 10px;
+
+}
+
 .carousel-inner{
     height: 400px;
 }
-.form-signin{
-    width: 30%;
-    height: auto;
-    display: bloc;
-   margin-left: 35%;
-   margin-top: 5%;
-   padding: 0 10px 0;
-   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-   border-radius: 10px;
+.round-image-wrapper {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
 }
+
+.round-image-wrapper .rounded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .d-flex{
-    background-color: rgb(140, 194, 140);
+    margin-top: 10px;
+    background-color: rgb(157, 194, 181);
 }
 .d-block{
     padding-right: 10px;
 }
+
 .nav{
     margin: 10px 5px !important;
     border-radius: 5px;
@@ -59,9 +115,17 @@ body{
 }
 .align-items-start{
     margin: 10%;
+    background-color: rgb(146, 189, 174);
 }
+
 .liste-rdv li{
     margin-top: 30px;
     color: rgb(44, 119, 44);
+    background-color: rgb(186, 224, 211);
+}
+footer{
+    background : linear-gradient(90deg, rgb(142, 190, 174) 0%, rgb(161, 133, 192) 100%);
+    text-align: left
+    
 }
 

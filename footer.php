@@ -1,11 +1,15 @@
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer mt-auto py-3 ">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-            <h4>Qui suis-je?</h4>
-            <p class="card-text mb-auto">Maria José est une thérapeute familiale situé à Vila Nova de Gaia au Portugal, expérimentée dévouée à aider les familles à traverser les défis et à construire des relations saines et épanouissantes. Avec une approche centrée sur la famille et une écoute bienveillante, Maria José offre un espace sûr et confidentiel pour explorer les dynamiques familiales, améliorer la communication et trouver des solutions constructives.
+                <h4>Qui suis-je?</h4>
+                <p class="card-text mb-auto">Maria José est une thérapeute familiale situé à Vila Nova de Gaia au
+                    Portugal, expérimentée dévouée à aider les familles à traverser les défis et à construire des
+                    relations saines et épanouissantes. Avec une approche centrée sur la famille et une écoute
+                    bienveillante, Maria José offre un espace sûr et confidentiel pour explorer les dynamiques
+                    familiales, améliorer la communication et trouver des solutions constructives.
 
-</p>
+                </p>
             </div>
             <div class="col-md-4">
                 <h4>Links uteis</h4>
@@ -19,7 +23,7 @@
                     <li>
                         <a href="/views/mensions_legales.php">Mensions Légales</a>
                     </li>
-                  
+
                     <li>
                         <a href="/views/services.php">Services d'acompagnement proposés</a>
                     </li>
@@ -33,8 +37,9 @@
 
 
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
-        <script src="/assets/js/projet.js"></script>
+<script src="/assets/js/projet.js"></script>
 
-        
+
 </body>
+
 </html>

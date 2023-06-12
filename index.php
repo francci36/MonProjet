@@ -32,12 +32,22 @@ require_once('header.php');
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
+                    <div class="round-image-wrapper">
+                        <img src="assets/images/majo.jpg" alt="Majo" class="rounded-image">
+                    </div>
                     <img src="assets/images/paysage2.jpeg" class="d-block w-100" alt="...">
+
                 </div>
                 <div class="carousel-item">
+                <div class="round-image-wrapper">
+                        <img src="assets/images/majo.jpg" alt="Majo" class="rounded-image">
+                    </div>
                     <img src="assets/images/paysage3.jpeg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
+                <div class="round-image-wrapper">
+                        <img src="assets/images/majo.jpg" alt="Majo" class="rounded-image">
+                    </div>
                     <img src="assets/images/paysage4.jpeg" class="d-block w-100" alt="...">
                 </div>
             </div>

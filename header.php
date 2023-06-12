@@ -77,7 +77,7 @@ $oAgenda = $oAppRDV->get_Agenda();
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="/assets/images/majo.jpg" alt="mdo" width="32" height="32" class="rounded-circle"></a>
+                        <img src="/assets/images/family.avif" alt="mdo" width="32" height="32" class="rounded-circle"></a>
 
 
 
@@ -118,7 +118,8 @@ $oAgenda = $oAppRDV->get_Agenda();
                                     <a id="login-link" href="#connexion.html" class="dropdown-item">Se connecter</a>
                                 </li>
                             <?php endif; ?>
-                        <?php endif; ?>
+     
+                            <?php endif; ?>
                     </ul>
 
 
