@@ -1,4 +1,4 @@
-<footer class="footer mt-auto py-3 ">
+<footer class="footer mt-auto  ">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
