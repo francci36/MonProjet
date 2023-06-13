@@ -92,7 +92,6 @@ h4{
 
 .nav{
     width: auto;
-    height: 50px;
     margin: 10px 5px !important;
     border-radius: 5px;
     background-color: rgb(186, 224, 211);
@@ -102,11 +101,12 @@ h4{
     border-radius: 6px;
 }
 .rounded-circle{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 10px 5px !important;
     border-radius: 50%;
     background-color: rgb(186, 224, 211);
+
 }
 .nav-active:hover ,
 .nav-active {
@@ -128,15 +128,57 @@ h4{
     box-sizing: border-box;
 }
 
+
+#signup-form,
+#login-form {
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+}
+
+input, 
+button, 
+select, 
+optgroup, 
+textarea {
+    border: 1px solid #2e15f966;
+    border-radius: 5px;
+    background-color: #ffffffb0;
+    padding: 3px 5px;
+    font-size: 13px;
+}
+
+
+input:hover, 
+button:hover, 
+select:hover, 
+optgroup:hover, 
+textarea:hover {
+    border: 1px solid #2e15f98c;
+    border-radius: 5px;
+    background-color: #ffffffb5;
+}
+
+
+input[type="submit"] {
+        background-color: #82bdee;
+        padding: 5px 10px;
+}
+input[type="submit"]:hover{
+    background-color: #8b8fd57d;
+    padding: 5px 10px;
+}
+
+
 /**
 **
 **      blog
 **
 **/
 
-.constelacao{
+.thumbnail{
     width: 100%;
-    height: 300px;
+    height: auto;
     margin-top: 10px;
 }
 .align-items-start{
@@ -146,6 +188,12 @@ h4{
 .card {
     background-color: rgb(186, 224, 211);
 }
+
+
+
+
+
+
 /**
 **
 **      rdv
@@ -157,6 +205,19 @@ h4{
     color: rgb(44, 119, 44);
     background-color: rgb(186, 224, 211);
 }
+
+#crea-update-form {
+    display: block;
+    padding: 50px 60px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+
+
+
 /**
 **
 **      footer

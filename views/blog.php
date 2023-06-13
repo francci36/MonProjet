@@ -21,7 +21,7 @@ require_once('../app/classe.apprdvtherapeute.php');
                             <a class="text-dark" href="#">Comprendre la constellation familiale : un outil puissant pour
                                 la guérison</a>
                         </h3>
-                        <img class="constelacao" src="../assets/images/constelacao-familiar-1.jpg"
+                        <img class="thumbnail" src="../assets/images/constelacao-familiar-1.jpg"
                             alt="Constellation familiale">
 
                         <div class="mb-1 text-muted">05 Juin</div>
@@ -62,7 +62,7 @@ require_once('../app/classe.apprdvtherapeute.php');
                             <a class="text-dark" href="#">Les bienfaits de la constellation familiale : libérez-vous des
                                 schémas répétitifs</a>
                         </h3>
-                        <img class="constelacao" src="../assets/images/Image.jpg" alt="Constellation Familiale">
+                        <img class="thumbnail" src="../assets/images/Image.jpg" alt="Constellation Familiale">
                         <div class="mb-1 text-muted">05 Juin</div>
                         <p class="card-text mb-auto">Avez-vous déjà remarqué que certains schémas ou comportements se
                             répètent dans votre famille, comme des conflits fréquents, des problèmes de communication ou

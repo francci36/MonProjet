@@ -13,7 +13,6 @@ var rendez_vousForm = document.getElementById("rendez_vous-form");
 if( signupLink )
     signupLink.addEventListener("click", function(event) {
         event.preventDefault();
-        alert('inscription');
         loginForm.style.display = "none";
         signupForm.style.display = "block";
         rendez_vousForm.style.display = "none";
@@ -24,7 +23,6 @@ if( signupLink )
 if( loginLink )
     loginLink.addEventListener("click", function(event) {
         event.preventDefault();
-        alert("connexion");
         signupForm.style.display = "none";
         loginForm.style.display = "block";
         rendez_vousForm.style.display = "none";
@@ -32,7 +30,6 @@ if( loginLink )
 if( logoutLink )
     logoutLink.addEventListener("click", function(event) {
         event.preventDefault();
-        alert("deconnexion");
         // envoyer la cmd de décopnnexion
         // redirection vers interface_logout.php
         document.location.href="../interface/interface_logout.php";
@@ -47,3 +44,41 @@ if( rendez_vousLink )
         loginForm.style.display = "none";
         rendez_vousForm.style.display = "block";
     });
+    
+    //
+    //
+    //
+    //animation de fondu (fade) sur 5 secondes
+    $(document).ready(function() {
+        $('.rounded-image').hide().fadeIn(5000); 
+        
+    });
+    //
+    //
+    //
+    //animation de fondu (fade) sur 3 seconde sur le texte d'accueil
+    $(document).ready(function() {
+        $(".row.mb-2").hide().fadeIn(1000);
+    });
+   //
+   //
+   //
+    //animation de fondu sur les images du carousel 8 secondes
+    $(document).ready(function() {
+        $('.carousel-item').eq(0).addClass('active');
+    
+        function fadeCarouselImages() {
+            var activeItem = $('.carousel-item.active');
+            activeItem.animate({ opacity: 0 }, 300, function() {
+                activeItem.removeClass('active');
+                var nextItem = activeItem.next('.carousel-item');
+                if (nextItem.length === 0) {
+                    nextItem = $('.carousel-item').eq(0);
+                }
+                nextItem.addClass('active').css('opacity', 0).animate({ opacity: 1 }, 2000);
+            });
+        }
+    
+        setInterval(fadeCarouselImages, 4000);
+    });
+    
