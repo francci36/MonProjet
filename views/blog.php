@@ -43,7 +43,7 @@ require_once('../app/classe.apprdvtherapeute.php');
 
 
                         </p>
-                        <a href="#">Continue lendo</a>
+                        <a href="#">Continue...</a>
 
                     </div>
                     <!-- <div class="card-body d-flex flex-column align-items-end"> -->
@@ -74,7 +74,7 @@ require_once('../app/classe.apprdvtherapeute.php');
                             expériences peuvent continuer à influencer notre vie présente. En prenant conscience de ces
                             schémas, nous pouvons apporter des changements significatifs et favoriser une transformation
                             personnelle et familiale positive.</p>
-                        <a href="#">Continue reading</a>
+                        <a href="#">Continue...</a>
                     </div>
                     <!-- <div class="card-body d-flex flex-column align-items-end"> <img
                     class="constelacao" src="assets/images/Image.jpg" alt=""> -->

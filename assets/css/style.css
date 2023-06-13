@@ -1,4 +1,8 @@
-/* faire couleur dégradée dans le body */
+/**
+**
+**      global
+**
+**/
 body{
     
     background: linear-gradient(90deg, rgba(186, 224, 211, 1) 0%, rgb(146, 163, 189) 100%);
@@ -14,6 +18,7 @@ body{
     text-align: left;
     margin: 0;
 }
+
 h1{
     font-size: 30px;
     color: rgb(44, 119, 44);
@@ -68,6 +73,15 @@ h4{
     object-fit: cover;
 }
 
+
+
+/**
+**
+**      HEADER
+**
+**/
+
+
 .d-flex{
     margin-top: 10px;
     background-color: rgb(157, 194, 181);
@@ -77,6 +91,8 @@ h4{
 }
 
 .nav{
+    width: auto;
+    height: 50px;
     margin: 10px 5px !important;
     border-radius: 5px;
     background-color: rgb(186, 224, 211);
@@ -85,7 +101,13 @@ h4{
     background-color: rgb(109 218 243 / 30%);
     border-radius: 6px;
 }
-
+.rounded-circle{
+    width: 50px;
+    height: 50px;
+    margin: 10px 5px !important;
+    border-radius: 50%;
+    background-color: rgb(186, 224, 211);
+}
 .nav-active:hover ,
 .nav-active {
     background-color: rgb(109 218 243 / 85%);
@@ -106,7 +128,11 @@ h4{
     box-sizing: border-box;
 }
 
-
+/**
+**
+**      blog
+**
+**/
 
 .constelacao{
     width: 100%;
@@ -117,15 +143,31 @@ h4{
     margin: 10%;
     background-color: rgb(146, 189, 174);
 }
+.card {
+    background-color: rgb(186, 224, 211);
+}
+/**
+**
+**      rdv
+**
+**/
 
 .liste-rdv li{
     margin-top: 30px;
     color: rgb(44, 119, 44);
     background-color: rgb(186, 224, 211);
 }
+/**
+**
+**      footer
+**
+**/
 footer{
     background : linear-gradient(90deg, rgb(142, 190, 174) 0%, rgb(161, 133, 192) 100%);
-    text-align: left
+    text-align: left; 
+    padding: 50px 0 100px 0;
     
 }
-
+.margin-md-6{
+    padding: 50px 25px;
+}
