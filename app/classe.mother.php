@@ -35,4 +35,42 @@ class RT_AppRDVTherapeute_Mother {
         }
     }
 
+
+    
+    public function getAdminEmailFromDatabase() {
+        $oPdo = $this->get_pdo();
+        $oStmt = $oPdo->query("SELECT email FROM utilisateurs WHERE type_compte = 'admin' LIMIT 1");
+        $result = $oStmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($result && isset($result['email'])) {
+            return $result['email'];
+        }
+
+        return null;
+    }
+
+    public function send_email($from, $to, $subject, $content) {
+
+
+        if( !$from || !$to || !$subject || !$content ) {
+            return false;
+        }
+
+        // En-têtes de l'e-mail
+        $headers = "From: $from" . "\r\n" .
+                   "Reply-To: $from" . "\r\n" .
+                   "X-Mailer: PHP/" . phpversion();
+    
+    
+        // Envoi de l'e-mail
+        $success = mail($to, $subject, $content, $headers);
+    
+        // Vérifier si l'e-mail a été envoyé avec succès
+        if ($success) {
+            echo "E-mail envoyé avec succès.";
+        } else {
+            echo "Une erreur s'est produite lors de l'envoi de l'e-mail.";
+        }
+    }
+    
 }

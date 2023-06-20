@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../app/config.php');
+//require_once('../app/config.php');
 require_once('../app/classe.apprdvtherapeute.php');
 
 $oAppRDV = RT_AppRDVTherapeute::instance();
@@ -123,8 +123,7 @@ if (empty($aListeRDVUser)) {
 
                                     function supprimeRdv(id) {
                                        
-                                        //let field = document.getElementById('fd_actionQuery')
-                                        //field.value = 'deleteRdv';
+                                    
 
                                         let field = document.getElementById('fd_idRdv')
                                         field.value = id;

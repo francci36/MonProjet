@@ -1,11 +1,12 @@
 <?php
 session_start();
-require_once('../header.php');
+require_once('../app/classe.apprdvtherapeute.php');
+
 
 // initialise moin programme
 
 //require_once('app/config.php');
-require_once('../app/classe.apprdvtherapeute.php');
+require_once('../header.php');
 ?>
 <main class="flex-shrink-0">
   <div class="container">

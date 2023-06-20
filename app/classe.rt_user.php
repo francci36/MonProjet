@@ -17,6 +17,8 @@ class RT_User extends RT_AppRDVTherapeute_Mother {
     public function __construct($id = '') {
 
         $this->load( $id );
+        $this->type_compte = 'client'. 'admin';
+        $this->email = '';
     }
 
     public function getId() {
@@ -31,7 +33,7 @@ class RT_User extends RT_AppRDVTherapeute_Mother {
         return $this->prenom;
     }
 
-    public function getEmail() {
+    public function getEmail(){
         return $this->email;
     }
 
@@ -42,8 +44,12 @@ class RT_User extends RT_AppRDVTherapeute_Mother {
     public function getTelephone() {
         return $this->telephone;
     }
-
-    public function getTypeCompte() {
+     /**
+     * Obtenir le type de compte de l'utilisateur
+     *
+     * @return string|null Le type de compte de l'utilisateur ou null s'il n'est pas défini
+     */
+    public function getTypeCompte(): ?string {
         return $this->type_compte;
     }
 
@@ -265,6 +271,9 @@ class RT_User extends RT_AppRDVTherapeute_Mother {
         
         return false;
     }
+    
+    
+    
     //methode is_connected
     public function is_connected()
     {

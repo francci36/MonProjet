@@ -80,46 +80,24 @@ $oAgenda = $oAppRDV->get_Agenda();
                         <img src="/assets/images/family.avif" alt="mdo" width="32" height="32" class="rounded-circle"></a>
 
 
-
+                            <!--menu déroulant-->
                     <ul class="dropdown-menu text-small">
                         <?php if ($oUser->is_connected()): ?>
-                            <?php if ($oUser->isAdmin()): ?>
+                           
                                 <li>
                                     <a id="logout-link" href="#" class="dropdown-item">Se déconnecter</a>
                                 </li>
-                            <?php else: ?>
-                                <!-- <li>
-                    <a id="rendez_vous-link" href="#rendez_vous.html" class="dropdown-item">Prendre rdv</a>
-                </li> -->
-                                <li>
-                                    <a id="logout-link" href="#" class="dropdown-item">Se déconnecter</a>
-                                </li>
-                            <?php endif; ?>
+                            
                         <?php else: ?>
-                            <?php if ($_SERVER['REQUEST_URI'] == '/views/blog.php'): ?>
+                            
                                 <li>
                                     <a id="signup-link" href="#inscription.html" class="dropdown-item">S'inscrire</a>
                                 </li>
                                 <li>
                                     <a id="login-link" href="#connexion.html" class="dropdown-item">Se connecter</a>
                                 </li>
-                            <?php elseif ($_SERVER['REQUEST_URI'] == '/views/services.php'): ?>
-                                <li>
-                                    <a id="signup-link" href="#inscription.html" class="dropdown-item">S'inscrire</a>
-                                </li>
-                                <li>
-                                    <a id="login-link" href="#connexion.html" class="dropdown-item">Se connecter</a>
-                                </li>
-                            <?php else: ?>
-                                <li>
-                                    <a id="signup-link" href="#inscription.html" class="dropdown-item">S'inscrire</a>
-                                </li>
-                                <li>
-                                    <a id="login-link" href="#connexion.html" class="dropdown-item">Se connecter</a>
-                                </li>
-                            <?php endif; ?>
      
-                            <?php endif; ?>
+                        <?php endif; ?>
                     </ul>
 
 

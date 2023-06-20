@@ -1,21 +1,23 @@
 <?php
 session_start();
 require_once('../app/config.php');
+
 require_once('../app/classe.apprdvtherapeute.php');
-//require_once('../interface/interface_admin.php');
 
-
+// je récupère l'instance courante de l'application
 $oAppRDV = RT_AppRDVTherapeute::instance();
-
+// je demande à l'application de me renvoyer l'utilisateur eventuellement connecté
 $oUser = $oAppRDV->get_UserConnected();
 $oAgenda = $oAppRDV->get_Agenda();
 
+
+// securité
 // si l'utilisateur n'est pas connecté ou n'est pas admin, redirection vers la page d'accueil
 if(!$oUser->is_connected() || !$oUser->isAdmin()) {
    header('Location: /');
    exit;
 }
-
+//je construit ma page
 require_once('../header.php'); // j'affiche le header
 
 
@@ -46,7 +48,7 @@ if( !$oUser->isAdmin() ) {
             ?>
 
 
-              <!-- Formulaire de prise de rdv v2 -->
+              <!-- Formulaire de modification et suppression-->
                 <div id="update-form-<?php echo $oRdv->getId(); ?>" style="display:none;">
                     <form method="post" action="../interface/interface_admin.php">
                         <h2 id="formTitle">Modifiez votre rendez-vous</h2>
