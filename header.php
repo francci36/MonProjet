@@ -80,46 +80,24 @@ $oAgenda = $oAppRDV->get_Agenda();
                         <img src="/assets/images/family.avif" alt="mdo" width="32" height="32" class="rounded-circle"></a>
 
 
-
+                            <!--menu déroulant-->
                     <ul class="dropdown-menu text-small">
                         <?php if ($oUser->is_connected()): ?>
-                            <?php if ($oUser->isAdmin()): ?>
+                           
                                 <li>
                                     <a id="logout-link" href="#" class="dropdown-item">Se déconnecter</a>
                                 </li>
-                            <?php else: ?>
-                                <!-- <li>
-                    <a id="rendez_vous-link" href="#rendez_vous.html" class="dropdown-item">Prendre rdv</a>
-                </li> -->
-                                <li>
-                                    <a id="logout-link" href="#" class="dropdown-item">Se déconnecter</a>
-                                </li>
-                            <?php endif; ?>
+                            
                         <?php else: ?>
-                            <?php if ($_SERVER['REQUEST_URI'] == '/views/blog.php'): ?>
+                            
                                 <li>
                                     <a id="signup-link" href="#inscription.html" class="dropdown-item">S'inscrire</a>
                                 </li>
                                 <li>
                                     <a id="login-link" href="#connexion.html" class="dropdown-item">Se connecter</a>
                                 </li>
-                            <?php elseif ($_SERVER['REQUEST_URI'] == '/views/services.php'): ?>
-                                <li>
-                                    <a id="signup-link" href="#inscription.html" class="dropdown-item">S'inscrire</a>
-                                </li>
-                                <li>
-                                    <a id="login-link" href="#connexion.html" class="dropdown-item">Se connecter</a>
-                                </li>
-                            <?php else: ?>
-                                <li>
-                                    <a id="signup-link" href="#inscription.html" class="dropdown-item">S'inscrire</a>
-                                </li>
-                                <li>
-                                    <a id="login-link" href="#connexion.html" class="dropdown-item">Se connecter</a>
-                                </li>
-                            <?php endif; ?>
      
-                            <?php endif; ?>
+                        <?php endif; ?>
                     </ul>
 
 
@@ -145,7 +123,8 @@ $oAgenda = $oAppRDV->get_Agenda();
                                 <input type="password" id="password" name="password"><br><br>
                                 <label for="password2">confirmer Mot de passe :</label>
                                 <input type="password" id="password2" name="password2"><br><br>
-                                <input type="submit" value="S'inscrire">
+                                <!-- <input type="submit" value="S'inscrire"> -->
+                                <button id="btnEdit" type="submit" class="btn btn-primary">S'inscrire</button>
                                 <!-- ce champ caché envoie l'info qu'il s'agit du formulaire signup-form -->
                                 <input hidden name="form_name" value="signup-form">
                             </form>
@@ -154,10 +133,11 @@ $oAgenda = $oAppRDV->get_Agenda();
                         <div id="login-form" style="display:none;">
                             <form method="post" action="/interface/interface_header.php?e=login">
                                 <label for="login_email">Email :</label>
-                                <input type="email" id="login_email" name="login_email"><br><br>
+                                <input class="form-control" type="email" id="login_email" name="login_email"><br><br>
                                 <label for="login_password">Mot de passe :</label>
-                                <input type="login_password" id="login_password" name="login_password"><br><br>
-                                <input type="submit" value="Se connecter">
+                                <input class="form-control" type="login_password" id="login_password" name="login_password"><br><br>
+                                <!-- <input type="submit" value="Se connecter" class="btn-primary"> -->
+                                <button id="btnEdit" type="submit" class="btn btn-primary">Se connecter</button>
                                 <input hidden name="form_name" value="login-form">
                             </form>
                         </div>

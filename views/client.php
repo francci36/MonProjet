@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../app/config.php');
+//require_once('../app/config.php');
 require_once('../app/classe.apprdvtherapeute.php');
 
 $oAppRDV = RT_AppRDVTherapeute::instance();
@@ -97,7 +97,7 @@ if (empty($aListeRDVUser)) {
                                         document.getElementById('crea-update-form').style.display = 'block';
                                         //document.getElementsByName('form_name')[0].value = 'crea-update-formm';
                                         document.getElementById('actionQuery').value = 'createRdv';
-                                        document.getElementById('formTitle').innerHTML = "Créer votre rdv avec Docteur";
+                                        document.getElementById('formTitle').innerHTML = "Prendre un rendez-vous avec le thérapeute";
                                         document.getElementById('btnEdit').innerHTML = "Créer le rdv";
                                     }
 
@@ -123,8 +123,7 @@ if (empty($aListeRDVUser)) {
 
                                     function supprimeRdv(id) {
                                        
-                                        //let field = document.getElementById('fd_actionQuery')
-                                        //field.value = 'deleteRdv';
+                                    
 
                                         let field = document.getElementById('fd_idRdv')
                                         field.value = id;
