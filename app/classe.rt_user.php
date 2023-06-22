@@ -9,7 +9,7 @@ class RT_User extends RT_AppRDVTherapeute_Mother {
     private $password;
     private $telephone;
     private $type_compte;
-    public $valeur_test ="personne m'a dit";
+    //public $valeur_test ="personne m'a dit";
 
     public $b_is_connected = false;
 
@@ -145,7 +145,14 @@ class RT_User extends RT_AppRDVTherapeute_Mother {
         if($result){
             // Récupération de l'ID de l'utilisateur créé
             $this->id = $this->get_pdo()->lastInsertId();
-    
+            $this->nom = $nom;
+            $this->prenom = $prenom;
+            $this->email = $email;
+            $this->password = $password;
+            $this->telephone = $telephone;
+            $this->type_compte = $type_compte;
+            
+
             $this->b_is_connected = true;
             return true;
         } else {
@@ -171,10 +178,14 @@ class RT_User extends RT_AppRDVTherapeute_Mother {
             // Mot de passe valide
             // On met $this->b_is_connected à true et on retourne true
 
+            // chargeons les données de cet user
+            $this->load( $this->id );
+
             //
             $this->b_is_connected = true;
 
             return true;
+            
         } else {
             // Mot de passe invalide
 

@@ -28,9 +28,18 @@ if( !$oUser->isAdmin() ) {
     exit;
 }
 
+?>
 
+
+<div class="container">
+    <h1>Bonjour admin <?php echo $oUser->getPrenom() ?> !</h1>
+
+</div>
+
+<?php
 // lister tous les rdv
     $aListeRdv = $oAgenda->getAllRDV();
+
     if(count($aListeRdv) > 0) {
         echo '<div class="container">';
         echo '<h2>Liste de tous les rendez-vous :</h2>';
@@ -101,23 +110,23 @@ require_once('../footer.php'); // j'affiche le footer
 ?>
 
 
-                                <!-- block js -->
-                                <script >
-                                     function hideForm( form ) {
-                                        document.getElementById(form).style.display = 'none';
-                                    }
+<!-- block js -->
+<script >
+        function hideForm( form ) {
+        document.getElementById(form).style.display = 'none';
+    }
 
-                                    function updateRdv(id) {
-                                        
-                                        document.getElementById('update-form-'+id).style.display = 'block';
-                                        document.getElementById('delete-form-'+id).style.display = 'none';
-                                        
-                                    }
+    function updateRdv(id) {
+        
+        document.getElementById('update-form-'+id).style.display = 'block';
+        document.getElementById('delete-form-'+id).style.display = 'none';
+        
+    }
 
-                                    function supprimeRdv(id) {
-                                       
-                                        //document.getElementById('btnEdit').innerHTML = "Je confirme la suppression de ce rdv";
-                                        document.getElementById('delete-form-'+id).style.display = 'block';
-                                        document.getElementById('update-form-'+id).style.display = 'none';
-                                    }
-                                </script>
+    function supprimeRdv(id) {
+        
+        //document.getElementById('btnEdit').innerHTML = "Je confirme la suppression de ce rdv";
+        document.getElementById('delete-form-'+id).style.display = 'block';
+        document.getElementById('update-form-'+id).style.display = 'none';
+    }
+</script>
