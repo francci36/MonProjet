@@ -2,7 +2,6 @@
 
 
 
-$index=true;
 
 // initialise moin programme
 

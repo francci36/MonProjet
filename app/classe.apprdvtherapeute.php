@@ -56,7 +56,6 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
 
             if(static::$oUserConnected == null ) {
                 static::$oUserConnected = new RT_User();
-                static::$oUserConnected->valeur_test = "bonjour j'ai été initialisé";
             }
         }
         $o = static::$oUserConnected;
@@ -110,21 +109,6 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
     public static $instance;
 }
 
-
-
-
- function load_from_session2()
-{
-    global $oAppRDV;
-
-    // Charger les données de la session
-    //session_start();
-    if( isset($_SESSION['app_rdv_therapeute']) ) {
-
-        $oAppRDV->load_from_session();
-
-    }
-}
 
 
 

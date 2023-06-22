@@ -161,8 +161,6 @@ class RT_Rdv extends RT_AppRDVTherapeute_Mother {
     
     public function send_email_notification( $action, $oUser ) {
 
-
-
         switch( $action ) {
             case "création":
                 $subject_patient = $oUser->getPrenom(). " ".  $oUser->getNom()." : Confirmation de rendez-vous";

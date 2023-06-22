@@ -7,19 +7,37 @@ global $oAppRDV;
 
 
 // Rappel = qd je demande oUserConnected, je demande une REFERENCE & de l'objet
-$oUser = &$oAppRDV->get_UserConnected();
+$oUser = $oAppRDV->get_UserConnected();
 
 
+// est une requête envoyé par le code JS pour vérifier l'email ?
+if( isset($_GET['check-email']) && isset($_GET['email'])  ) {
+    
+    $email = $_GET['email'];
 
-/**
- * Ce fichier traite les requêtes de header.php
- */
-echo 'bonjour interface_header.php <br>';
+    // vérifions que email est bien un email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Retourner une réponse JSON avec false
+        echo json_encode(false);
+        exit;
+    }
 
 
+    // vérifier si l'email est unique
+    if( $oUser->check_email_not_used($email) == false ) {
+        // retourner false 
+        echo json_encode(false);
+        exit;
+    }
 
+
+    // email valide, retourne true
+    echo json_encode(true);
+    exit;
+
+}
 // on vérifie que le formulaire a été envoyé
-if( isset($_POST['form_name']) ) {
+elseif( isset($_POST['form_name']) ) {
 
 
     // on vérifie que le formulaire est le formulaire de connexion
@@ -67,32 +85,43 @@ if( isset($_POST['form_name']) ) {
                  && isset($_POST['password']) 
                  && isset($_POST['password2']) 
                  && isset($_POST['telephone']) 
-                 && isset($_POST['type_compte']) ) {
+                /* && isset($_POST['type_compte'])*/ ) {
+
             // on récupère les données du formulaire
             $nom = $_POST['nom'];
             $prenom = $_POST['prenom'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             $telephone = $_POST['telephone'];
-            $type_compte = $_POST['type_compte'];
+            $type_compte = 'Client'; //$_POST['type_compte'];
            
             
+            // vérifier si l'email est unique
+            if( $oUser->check_email_not_used($email) == false ) {
+                echo "Erreur: impossible de créer votre compte car l'email est déjà utilisé";
+                header('Location: /');
+                return;
+            }
+
             $r = $oUser->createUser($nom, $prenom, $email, $password, $telephone, $type_compte);
+
             if( $r && $oUser->is_connected() ) {
-                echo "utilisateur crée avec succèss ".$oUser->getNom(). " ". $oUser->getPrenom(). 
-                                        " ". $oUser->getEmail (). "". $oUser->getPassword(). "". $oUser->getTelephone(). 
-                                        " ". $oUser->getTypeCompte(). ": )";
+                echo "Votre compte utilisateur a bien été crée avec succès ";
 
                 $oAppRDV->save_to_session();
                 header('Location: /');
                 return;
+            }else {
+
+                // erreur créa compte
+                header('Location: /');
             }
 
 
         } else {
             // si les champs n'ont pas été remplis, on affiche un message d'erreur
             echo 'Erreur: tous les champs doivent être remplis';
-            // TODO pûis quoi ensuite ?
+            header('Location: /');
         }
 
 

@@ -1,6 +1,5 @@
 <?php
 session_start();
-$index = true;
 
 // initialise moin programme
 

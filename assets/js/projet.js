@@ -5,8 +5,8 @@ var logoutLink = document.getElementById("logout-link");
 var rendez_vousLink = document.getElementById("rendez_vous-link");
    
 // Récupère les formulaires d'inscription et de connexion
-var signupForm = document.getElementById("signup-form");
-var loginForm = document.getElementById("login-form");
+var signupForm = document.getElementById("signup-div");
+var loginForm = document.getElementById("login-div");
 var rendez_vousForm = document.getElementById("rendez_vous-form");
    
 // Affiche le formulaire d'inscription lorsqu'on clique sur le lien "S'inscrire"
@@ -15,7 +15,9 @@ if( signupLink )
         event.preventDefault();
         loginForm.style.display = "none";
         signupForm.style.display = "block";
-        rendez_vousForm.style.display = "none";
+        //rendez_vousForm.style.display = "none";
+
+        document.getElementById('nom').focus();
     });
     
    
@@ -25,8 +27,12 @@ if( loginLink )
         event.preventDefault();
         signupForm.style.display = "none";
         loginForm.style.display = "block";
-        rendez_vousForm.style.display = "none";
+        //rendez_vousForm.style.display = "none";
+
+        
+        document.getElementById('login_email').focus();
     });
+
 if( logoutLink )
     logoutLink.addEventListener("click", function(event) {
         event.preventDefault();

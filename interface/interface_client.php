@@ -17,8 +17,7 @@ if(!$oUser->is_connected()){
 }
 
 if( !isset($_POST['form_name']) 
-            || $_POST['form_name'] != 'rendez_vous-form'
-            /*|| !isset($_GET['e'])*/ ) {
+            || $_POST['form_name'] != 'rendez_vous-form'  ) {
        
     echo 'Erreur: le formulaire n\'a pas été envoyé';
     // faire la redirection vers la page d'accueil
