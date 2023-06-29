@@ -1,22 +1,23 @@
-CREATE TABLE utilisateur (
+CREATE TABLE utilisateurs (
     utilisateur_id INT PRIMARY KEY AUTO_INCREMENT,
-    utilisateur_name VARCHAR(50) NOT NULL;
-    utilisateur_lastName VARCHAR(50) NOT NULL,
-    utilisateur_email VARCHAR(50) NOT NULL,
-    utilisateur_telephone VARCHAR(50) NOT NULL,
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    telephone VARCHAR(50) NOT NULL,
     type_compte VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE rendez_vous (
-    rendez_vous_id INT PRIMARY KEY AUTO_INCREMENT,
-    date_heure_rendez_vous DATETIME NOT NULL,
-    etat_rendez_vous VARCHAR(50) NOT NULL,
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    date DATETIME NOT NULL,
+    heure_debut TIME NOT NULL,
+    heure_fin TIME NOT NULL,
     utilisateur_id INT NOT NULL,
-    FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(utilisateur_id)
+    FOREIGN KEY (utilisateurs_id) REFERENCES utilisateur(utilisateurs_id)
 );
 
-INSERT INTO utilisateur (utilisateur_name, utilisateur_lastName, utilisateur_email, utilisateur_telephone, type_compte)
+INSERT INTO utilisateur (nom, prenom, email, telephone, type_compte)
 VALUES ('Jean', 'Dupont', 'jean.dupont@example.com', '555-1234', 'client');
 
-INSERT INTO rendez_vous (date_heure_rendez_vous, etat_rendez_vous, utilisateur_id)
-VALUES ('2023-06-26 14:30:00', 'en cours', 1);
+INSERT INTO rendez_vous (date, heure_debut, heure_fin, utilisateur_id)
+VALUES ('2023-06-26', '14:30:00', '15:00:00', 1);

@@ -15,7 +15,7 @@ if(!$oUser->is_connected()){
     header('Location: /');
     exit;
 }
-
+// on vérifie que le formulaire est le formulaire de rendez-vous
 if( !isset($_POST['form_name']) 
             || $_POST['form_name'] != 'rendez_vous-form'  ) {
        
@@ -25,16 +25,13 @@ if( !isset($_POST['form_name'])
 }
 
 switch($_POST['actionQuery']){
-    case 'deleteRdv':
-        $idRdv = $_POST['idRdv'];
-        $oAgenda = $oAppRDV->get_Agenda();
-        $oRDV = $oAgenda->getRDVById($idRdv);
-
-        if ($oRDV && $oRDV->getUserId() == $oUser->getId()) {
-            $oRDV->deleteRdv();
-        }
+    case 'createRdv' :
+        $oRdv = new RT_Rdv();
+        $date = $_POST['date'];
+        $heure_debut = $_POST['heure_debut'];
+        $heure_fin = $_POST['heure_fin'];
+        $oRdv->createRdv($date, $heure_debut, $heure_fin, $oUser);
         break;
-    
 
     case 'updateRdv':
         $idRdv = $_POST['idRdv'];
@@ -48,12 +45,14 @@ switch($_POST['actionQuery']){
         }
         break;
     
-    case 'createRdv' :
-        $oRdv = new RT_Rdv();
-        $date = $_POST['date'];
-        $heure_debut = $_POST['heure_debut'];
-        $heure_fin = $_POST['heure_fin'];
-        $oRdv->createRdv($date, $heure_debut, $heure_fin, $oUser);
+    case 'deleteRdv':
+        $idRdv = $_POST['idRdv'];
+        $oAgenda = $oAppRDV->get_Agenda();
+        $oRDV = $oAgenda->getRDVById($idRdv);
+
+        if ($oRDV && $oRDV->getUserId() == $oUser->getId()) {
+            $oRDV->deleteRdv();
+        }
         break;
 }
 

@@ -92,7 +92,7 @@ class RT_Agenda extends RT_AppRDVTherapeute_Mother {
         return $aRDV;
     }
         
-        // get rdv by id
+        // cette méthode retourne un rendez-vous à partir de son id
         public function getRDVById($id) {
             $oPdo = $this->get_pdo();
             $oStmt = $oPdo->prepare('SELECT * FROM rendez_vous WHERE id = :id');

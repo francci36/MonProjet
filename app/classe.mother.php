@@ -14,7 +14,6 @@ class RT_AppRDVTherapeute_Mother {
     }
 
 
-
     public function pdo_connect() {
         // on récupère les variables de connexion globales
         global $DB_HOST;
@@ -35,8 +34,7 @@ class RT_AppRDVTherapeute_Mother {
         }
     }
 
-
-    
+    //cette récupérer l'e-mail de l'admin à partir de la base de données
     public function getAdminEmailFromDatabase() {
         $oPdo = $this->get_pdo();
         $oStmt = $oPdo->query("SELECT email FROM utilisateurs WHERE type_compte = 'admin' LIMIT 1");
@@ -49,13 +47,14 @@ class RT_AppRDVTherapeute_Mother {
         return null;
     }
 
+    // cette méthode sert à envoyer un e-mail
     public function send_email($from, $to, $subject, $content) {
 
-
+        // Vérifier si les champs "De", "À", "Objet" et "Contenu" sont remplis
         if( !$from || !$to || !$subject || !$content ) {
             return false;
         }
-
+        
         // En-têtes de l'e-mail
         $headers = "From: $from" . "\r\n" .
                    "Reply-To: $from" . "\r\n" .
