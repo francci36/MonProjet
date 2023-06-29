@@ -31,7 +31,7 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
     public static $oAgenda;
 
 
-
+ // cette méthode retourne l'agenda
     public function get_Agenda() : RT_Agenda
     {
         if(static::$oAgenda == null )  {
@@ -47,7 +47,7 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
         return static::$oAgenda;
     }
 
-
+// cette méthode retoure l'utilisateur connecté (RT_User)
     public function get_UserConnected( /*&$o*/ ) : RT_User
     {
         if(static::$oUserConnected == null ) {
@@ -62,16 +62,15 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
         return $o;
     }
 
-
+    // cette méthode sert à charger les données à partir de la session
     public function load_from_session( $object_name = '' )
     {
-
-        // Charger les données de la session
-        //session_start();
+        // verifie si la clé existe dans la session
         if( isset($_SESSION['app_rdv_therapeute']) ) {
 
-
+            
             switch($object_name) {
+                
                 case 'user_connected':
                     static::$oUserConnected = unserialize( $_SESSION['user_connected'] );
                     break;
@@ -86,19 +85,21 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
 
         }
     }
-
+    
+    // cette méthode sert à sauvegarder les données dans la session
     public function save_to_session() {
-        // Sauvegarder les données dans la session
-        //session_start();
+      
+        // on initialise clé app_rdv_therapeute à true
         $_SESSION['app_rdv_therapeute'] = true;
         $_SESSION['user_connected'] = serialize($this->get_UserConnected() );
         $_SESSION['user_connected-email'] = serialize(  $this->get_UserConnected()->getEmail() );
         $_SESSION['agenda'] = serialize( $this->get_Agenda() /*$this->oAgenda*/ );
     }
 
+    // cette méthode sert à récupérer l'instance de l'objet en cours
     public static function instance() {
         
-        // Retourner l'instance de l'objet
+        // si l'instance n'existe pas, on la crée
         if( !isset(static::$instance) ) {
             static::$instance = new self();
 
@@ -117,7 +118,7 @@ class RT_AppRDVTherapeute extends RT_AppRDVTherapeute_Mother {
 
 
 //
-/// INSTANCIE L'app
+/// INSTANCIE L'APPLICATION
 global $oAppRDV;
 $oAppRDV =  RT_AppRDVTherapeute::instance();
 

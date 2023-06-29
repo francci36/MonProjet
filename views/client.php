@@ -112,18 +112,21 @@ if (empty($aListeRDVUser)) {
                 document.getElementById('formTitle').innerHTML = "Prendre un rendez-vous avec le thérapeute";
                 document.getElementById('btnEdit').innerHTML = "Créer le rdv";
             }
-
-
-
+            // méthode appélée pour mettre à jour un rdv existant
             function updateRdv(id, date, heure_debut, heure_fin) {
-                
+                // afficher le formulaire
                 document.getElementById('crea-update-form').style.display = 'block';
+                // cacher le formulaire de suppression
                 document.getElementById('delete-form').style.display = 'none';
+                // changer la valeur de actionQuery
                 let field = document.getElementById('actionQuery')
                 field.value = 'updateRdv';
 
+                // changer le titre du formulaire
+
                 document.getElementById('idRdv').value = id;
-                
+
+                // changer les valeurs des champs
                 document.getElementById('formTitle').innerHTML = "Modifier votre rdv du "+date+" avec Docteur";
                 document.getElementById('date').value = date;
                 document.getElementById('heure_debut').value = heure_debut;
@@ -133,9 +136,10 @@ if (empty($aListeRDVUser)) {
 
             function supprimeRdv(id) {
 
+                // changer la valeur de actionQuery
                 let field = document.getElementById('fd_idRdv')
                 field.value = id;
-
+                // afficher le formulaire
                 document.getElementById('delete-form').style.display = 'block';
                 document.getElementById('crea-update-form').style.display = 'none';
             }

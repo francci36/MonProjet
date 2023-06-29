@@ -112,20 +112,16 @@ require_once('../footer.php'); // j'affiche le footer
 
 <!-- block js -->
 <script >
-        function hideForm( form ) {
+    function hideForm( form ) {
         document.getElementById(form).style.display = 'none';
     }
 
     function updateRdv(id) {
-        
         document.getElementById('update-form-'+id).style.display = 'block';
         document.getElementById('delete-form-'+id).style.display = 'none';
-        
     }
 
     function supprimeRdv(id) {
-        
-        //document.getElementById('btnEdit').innerHTML = "Je confirme la suppression de ce rdv";
         document.getElementById('delete-form-'+id).style.display = 'block';
         document.getElementById('update-form-'+id).style.display = 'none';
     }
